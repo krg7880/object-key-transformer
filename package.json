@@ -1,0 +1,48 @@
+{
+  "name": "object-key-transformer",
+  "version": "1.0.0",
+  "description": "Transforms the keys of objects and arrays (snake_case, camelCase, CONSTANTS, header-case, etc).",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test "
+  },
+  "keywords": [
+    "map",
+    "obj",
+    "object",
+    "key",
+    "keys",
+    "value",
+    "values",
+    "val",
+    "iterate",
+    "camelcase",
+    "camel-case",
+    "camel",
+    "case",
+    "dash",
+    "hyphen",
+    "dot",
+    "underscore",
+    "separator",
+    "string",
+    "text",
+    "convert",
+    "deep",
+    "recurse",
+    "recursive"
+  ],
+  "author": "Kirk Gordon <kirk7880@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "change-case": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-jsdoc": "^0.1.5",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-nodemon": "^2.2.1",
+    "mocha": "^4.0.1"
+  }
+}
