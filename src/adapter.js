@@ -224,17 +224,17 @@ class Adapter {
    * - title
    * - upper
    * - ucFirst
+   * 
    * @param {Object} options
    * @prop {Object|Array} Object.data The payload to whos keys to transform 
    * @prop {string|Function} Object.format The formatting to apply
    * @prop {Boolean} Object.returnOriginal If the specified formatter is invalid,
-   * @prop {Boolean} Should we transform the entire object or just
-   * root level properties.
-   *  should we return the orginal payload?
+   * @prop {Boolean} Object.recursive Specify if we should adapt the entire object
    */
   adapt(options={data: null, format: null, returnOriginal: false, recursive: true}) {
-
+    
     const {data, format, returnOriginal} = options 
+
     // check if we have valid data
     if (data) {
       _private(this)._data = data
@@ -248,7 +248,6 @@ class Adapter {
     } else if (typeof formatter === 'function') {
       _private(this)._formatter = format
     } else if (!_private(this)._formatter) { 
-      // No valid formatter was specified. Return false or original payload
       _private(this)._debug(`${format} is not a recognized format! Returning original payload`)
       return _private(this)._shouldReturnOriginalData(_private(this)._data)
     }
